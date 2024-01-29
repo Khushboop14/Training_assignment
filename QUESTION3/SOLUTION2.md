@@ -12,3 +12,4 @@ WHERE rs.status_id = 'RETURN_COMPLETED'
 AND oh.PRODUCT_STORE_ID = 'SM_STORE'
 AND rh.RETURN_CHANNEL_ENUM_ID = 'ECOM_RTN_CHANNEL';
 
+![Screenshot from 2024-01-29 16-26-28](https://github.com/Khushboop14/Training_assignment/assets/126051670/12e2113f-4fda-424c-803f-a7afdfb21c25)
