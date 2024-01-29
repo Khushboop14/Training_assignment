@@ -16,5 +16,5 @@ AND oh.PRODUCT_STORE_ID = 'SM_STORE'
 AND pt.IS_DIGITAL = 'N' 
 AND pt.IS_PHYSICAL = 'Y';
 
-'''
+```
 ![Screenshot from 2024-01-29 12-59-39](https://github.com/Khushboop14/Training_assignment/assets/126051670/021bfc93-2a4d-47e9-9f98-7d5751febc5c)
