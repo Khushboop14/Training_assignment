@@ -11,5 +11,5 @@ ON oh.order_id = ri.order_id
 WHERE rs.status_id = 'RETURN_COMPLETED'
 AND oh.PRODUCT_STORE_ID = 'SM_STORE'
 AND rh.RETURN_CHANNEL_ENUM_ID = 'ECOM_RTN_CHANNEL';
-
+```
 ![Screenshot from 2024-01-29 16-26-28](https://github.com/Khushboop14/Training_assignment/assets/126051670/df0a46a0-7e53-485e-af41-0675028746f2)
