@@ -1,3 +1,5 @@
+3.Fetch the order id and contact mech id for the shipping address of the orders completed in October of 2023.
+	
 ```sql
 SELECT  ocm.order_id, ocm.contact_mech_id, ocm.contact_mech_purpose_type_id
 FROM order_contact_mech as ocm
