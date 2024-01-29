@@ -1,3 +1,15 @@
+2.Fetch the following columns for completed return items of SM_STORE for ecom return channel.  
+- RETURN_ID 
+- ORDER_ID
+- PRODUCT_STORE_ID 
+- STATUS_DATETIME
+- ORDER_NAME 
+- FROM_PARTY_ID 
+- RETURN_DATE 
+- ENTRY_DATE
+- RETURN_CHANNEL_ENUM_ID
+  
+
 ```sql 
 SELECT oh.order_id, oh.order_name, oh.product_store_id, rh.return_id, rh.return_channel_enum_id, 
 rh.ENTRY_DATE, rh.RETURN_DATE,rh.FROM_PARTY_ID, rs.status_datetime
