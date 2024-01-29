@@ -1,0 +1,15 @@
+```sql 
+SELECT oh.order_id, oh.order_name, oh.product_store_id, rh.return_id, rh.return_channel_enum_id, 
+rh.ENTRY_DATE, rh.RETURN_DATE,rh.FROM_PARTY_ID, rs.status_datetime
+FROM return_header as rh 
+JOIN return_item as ri
+ON rh.return_id = ri.return_id 
+JOIN return_status as rs
+ON ri.return_id = rs.return_id AND ri.return_item_seq_id = rs.return_item_seq_id 
+JOIN order_header as oh
+ON oh.order_id = ri.order_id 
+WHERE rs.status_id = 'RETURN_COMPLETED'
+AND oh.PRODUCT_STORE_ID = 'SM_STORE'
+AND rh.RETURN_CHANNEL_ENUM_ID = 'ECOM_RTN_CHANNEL';
+
+![Screenshot from 2024-01-29 16-26-28](https://github.com/Khushboop14/Training_assignment/assets/126051670/df0a46a0-7e53-485e-af41-0675028746f2)
