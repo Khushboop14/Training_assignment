@@ -1,4 +1,20 @@
-```sql 
+1. Fetch the following columns for completed order items for sales orders of SM_STORE product store and that are physical items.
+ORDER_ID
+ORDER_ITEM_SEQ_ID
+PRODUCT_ID
+PRODUCT_TYPE_ID
+IS_PHYSICAL
+IS_DIGITAL
+SALES_CHANNEL_ENUM_ID
+ORDER_DATE
+ENTRY_DATE
+STATUS_ID
+STATUS_DATETIME
+ORDER_TYPE_ID
+PRODUCT_STORE_ID 
+
+```sql
+
 select os.ORDER_ID, os.ORDER_ITEM_SEQ_ID, oitm.PRODUCT_ID, os.STATUS_DATETIME, os.STATUS_ID, 
 oh.PRODUCT_STORE_ID, pt.PRODUCT_TYPE_ID, pt.IS_DIGITAL, pt.IS_PHYSICAL, oh.SALES_CHANNEL_ENUM_ID, oh.ORDER_TYPE_ID, oh.ORDER_DATE, oh.ENTRY_DATE
 from order_header as oh 
