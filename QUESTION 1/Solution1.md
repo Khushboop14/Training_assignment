@@ -1,4 +1,4 @@
-How many single-item orders were fulfilled from warehouses in the last month?
+1. How many single-item orders were fulfilled from warehouses in the last month?
 ```sql
 SELECT distinct oitm.order_id
 FROM order_item as oitm
