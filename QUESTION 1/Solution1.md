@@ -10,7 +10,8 @@ JOIN facility as f
 ON f.facility_id = oisg.facility_id
 WHERE f.facility_type_id = 'WAREHOUSE'
 AND ost.status_datetime >= DATE_SUB(curdate(), INTERVAL 1 MONTH)  
+AND ost.STATUS_ID = 'ITEM_COMPLETED'
 GROUP BY oitm.order_id 
-HAVING count(oitm.order_item_seq_id) = 1;
+HAVING count(oitm.order_item_seq_id) = 1; 
 ```
 ![Screenshot from 2024-01-30 11-24-18](https://github.com/Khushboop14/Training_assignment/assets/126051670/e1b675c8-1bf0-4dc3-98b9-bc6de87c5174)
