@@ -17,10 +17,6 @@ Left JOIN postal_address as ps
 JOIN product as p
 	ON p.product_id = oitm.product_id
 WHERE oh.order_type_id = 'SALES_ORDER' AND oitm.status_id = 'ITEM_CREATED';
-``   
-![Screenshot from 2024-02-22 19-48-33](https://github.com/Khushboop14/Training_assignment/assets/126051670/199eabc1-2cea-4710-89e1-2a0bfbed4cf5)
-
-![Screenshot from 2024-02-22 19-50-32](https://github.com/Khushboop14/Training_assignment/assets/126051670/5ec884a4-08ef-40fe-b62c-a0a168c1e578)
-
-![Screenshot from 2024-02-22 19-50-55](https://github.com/Khushboop14/Training_assignment/assets/126051670/da13b359-1932-4281-9c35-9659a6c7fbe0)
+```
+![Screenshot from 2024-02-22 19-48-33](https://github.com/Khushboop14/Training_assignment/assets/126051670/cbe5610b-eaeb-44cb-9b1d-4651bb54f639)
 
