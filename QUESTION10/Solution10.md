@@ -20,3 +20,8 @@ WHERE oh.order_type_id = 'SALES_ORDER' AND oitm.status_id = 'ITEM_CREATED';
 ```
 ![Screenshot from 2024-02-22 19-48-33](https://github.com/Khushboop14/Training_assignment/assets/126051670/cbe5610b-eaeb-44cb-9b1d-4651bb54f639)
 
+![Screenshot from 2024-02-22 19-50-32](https://github.com/Khushboop14/Training_assignment/assets/126051670/0031d37a-dc16-43df-a5bd-403ad9c17e4c)
+
+![Screenshot from 2024-02-22 19-50-55](https://github.com/Khushboop14/Training_assignment/assets/126051670/ccda8d94-becf-4f1c-9caf-485720d0b396)
+
+
