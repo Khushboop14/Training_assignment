@@ -15,18 +15,18 @@
 
 ```sql
 
-select os.ORDER_ID, os.ORDER_ITEM_SEQ_ID, oitm.PRODUCT_ID, os.STATUS_DATETIME, os.STATUS_ID, 
+SELECT os.ORDER_ID, os.ORDER_ITEM_SEQ_ID, oitm.PRODUCT_ID, os.STATUS_DATETIME, os.STATUS_ID, 
 oh.PRODUCT_STORE_ID, pt.PRODUCT_TYPE_ID, pt.IS_DIGITAL, pt.IS_PHYSICAL, oh.SALES_CHANNEL_ENUM_ID, oh.ORDER_TYPE_ID, oh.ORDER_DATE, oh.ENTRY_DATE
-from order_header as oh 
-join order_item as oitm 
-on oitm.ORDER_ID = oh.ORDER_ID 
-Join order_status as os
-on oitm.ORDER_ITEM_SEQ_ID = os.ORDER_ITEM_SEQ_ID AND oitm.order_id = os.ORDER_ID
-join product as p
-on  p.product_id = oitm.product_id
-join product_type as pt
-on pt.PRODUCT_TYPE_ID = p.PRODUCT_TYPE_ID
-where  oh.ORDER_TYPE_ID = 'SALES_ORDER'
+FROM order_header AS oh 
+JOIN order_item AS oitm 
+ON oitm.ORDER_ID = oh.ORDER_ID 
+JOIN order_status AS os
+ON oitm.ORDER_ITEM_SEQ_ID = os.ORDER_ITEM_SEQ_ID AND oitm.order_id = os.ORDER_ID
+JOIN product AS p
+ON p.product_id = oitm.product_id
+JOIN product_type AS pt
+ON pt.PRODUCT_TYPE_ID = p.PRODUCT_TYPE_ID
+WHERE  oh.ORDER_TYPE_ID = 'SALES_ORDER'
 AND os.STATUS_ID = 'ITEM_COMPLETED'  
 AND oh.PRODUCT_STORE_ID = 'SM_STORE'
 AND pt.IS_DIGITAL = 'N' 
