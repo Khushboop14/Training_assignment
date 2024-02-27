@@ -3,7 +3,7 @@
 ```
 QUERY:
 
-``` sql
+```sql
 SELECT ritm.order_id AS ORDER_ID 
 FROM return_header AS rh
 JOIN return_item AS ritm
@@ -19,4 +19,4 @@ OUTPUT:
 ```
 QUERY COST:
 
-![Screenshot from 2024-02-27 10-51-00](https://github.com/Khushboop14/Training_assignment/assets/126051670/55e6f29b-60f3-4f4a-883e-47788fdb79bc)
+![Screenshot from 2024-02-27 10-51-00](https://github.com/Khushboop14/Training_assignment/assets/126051670/1129566d-34fa-458e-bdea-78c45f9181ee)
