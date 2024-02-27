@@ -1,5 +1,6 @@
 6. Fetch all the physical items completed from Warehouse in September of 2023.
-```
+
+```sql
 SELECT oitm.order_id AS order_id ,
 oitm.order_item_seq_id AS order_item, 
 f.facility_type_id AS location_type , 
