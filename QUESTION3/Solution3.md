@@ -12,7 +12,7 @@ JOIN facility_type as ft
 ON ft.facility_type_id = f.facility_type_id
 WHERE ft.PARENT_TYPE_ID = 'PHYSICAL_STORE'
 AND st.status_id = 'SHIPMENT_SHIPPED'
-AND st.status_date between "2023-12-01" AND "2023-12-25";
+AND st.status_date between "2024-01-01" AND "2024-25-01";
 
 ```
 ![Screenshot from 2024-01-30 12-26-40](https://github.com/Khushboop14/Training_assignment/assets/126051670/aae73bed-0aab-425a-ac56-007dddd85b3e)
