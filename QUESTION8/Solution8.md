@@ -1,6 +1,6 @@
 8.  How many orders with a single return were recorded in the last month?
 
-```
+
 QUERY:
 
 ```sql
@@ -18,5 +18,5 @@ OUTPUT:
 
 ```
 QUERY COST:
+![Screenshot from 2024-02-27 10-51-00](https://github.com/Khushboop14/Training_assignment/assets/126051670/a412412b-4d2f-4871-b01a-c7ef98ceaa20)
 
-![Screenshot from 2024-02-27 10-51-00](https://github.com/Khushboop14/Training_assignment/assets/126051670/1129566d-34fa-458e-bdea-78c45f9181ee)
