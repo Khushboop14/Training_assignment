@@ -1,5 +1,5 @@
 11. Fetch all the customers created in June 2023.
-``sql
+```sql
 SELECT p.party_id AS party_id , p.created_date as created_date
 FROM party as p
 JOIN party_role as pr
