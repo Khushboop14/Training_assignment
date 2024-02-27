@@ -1,6 +1,6 @@
 5. In New York, which product has the highest sales?
 ```sql
-SELECT oitm.PRODUCT_ID,(oitm.QUANTITY *oitm.UNIT_PRICE) AS TOTAL_SALES
+SELECT oitm.PRODUCT_ID,SUM(oitm.QUANTITY *oitm.UNIT_PRICE) AS TOTAL_SALES
 FROM order_item as oitm
 JOIN order_contact_mech as ocm
 ON ocm.order_id = oitm.ORDER_ID
