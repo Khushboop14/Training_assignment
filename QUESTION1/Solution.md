@@ -15,22 +15,46 @@
 
 ```sql
 
-SELECT os.ORDER_ID, os.ORDER_ITEM_SEQ_ID, oitm.PRODUCT_ID, os.STATUS_DATETIME, os.STATUS_ID, 
-oh.PRODUCT_STORE_ID, pt.PRODUCT_TYPE_ID, pt.IS_DIGITAL, pt.IS_PHYSICAL, oh.SALES_CHANNEL_ENUM_ID, oh.ORDER_TYPE_ID, oh.ORDER_DATE, oh.ENTRY_DATE
-FROM order_header AS oh 
-JOIN order_item AS oitm 
-ON oitm.ORDER_ID = oh.ORDER_ID 
-JOIN order_status AS os
-ON oitm.ORDER_ITEM_SEQ_ID = os.ORDER_ITEM_SEQ_ID AND oitm.order_id = os.ORDER_ID
-JOIN product AS p
-ON p.product_id = oitm.product_id
-JOIN product_type AS pt
-ON pt.PRODUCT_TYPE_ID = p.PRODUCT_TYPE_ID
-WHERE  oh.ORDER_TYPE_ID = 'SALES_ORDER'
-AND os.STATUS_ID = 'ITEM_COMPLETED'  
-AND oh.PRODUCT_STORE_ID = 'SM_STORE'
-AND pt.IS_DIGITAL = 'N' 
-AND pt.IS_PHYSICAL = 'Y';
+
+SELECT 
+    os.ORDER_ID,
+    os.ORDER_ITEM_SEQ_ID,
+    oitm.PRODUCT_ID,
+    os.STATUS_DATETIME,
+    os.STATUS_ID,
+    oh.PRODUCT_STORE_ID,
+    pt.PRODUCT_TYPE_ID,
+    pt.IS_DIGITAL,
+    pt.IS_PHYSICAL,
+    oh.SALES_CHANNEL_ENUM_ID,
+    oh.ORDER_TYPE_ID,
+    oh.ORDER_DATE,
+    oh.ENTRY_DATE
+FROM
+    order_header AS oh
+        JOIN
+    order_item AS oitm ON oitm.ORDER_ID = oh.ORDER_ID
+        JOIN
+    order_status AS os ON oitm.ORDER_ITEM_SEQ_ID = os.ORDER_ITEM_SEQ_ID
+        AND oitm.order_id = os.ORDER_ID
+        JOIN
+    product AS p ON p.product_id = oitm.product_id
+        JOIN
+    product_type AS pt ON pt.PRODUCT_TYPE_ID = p.PRODUCT_TYPE_ID
+WHERE
+    oh.ORDER_TYPE_ID = 'SALES_ORDER'
+        AND os.STATUS_ID = 'ITEM_COMPLETED'
+        AND oh.PRODUCT_STORE_ID = 'SM_STORE'
+        AND pt.IS_PHYSICAL = 'Y';
 
 ```
-![Screenshot from 2024-01-29 12-59-39](https://github.com/Khushboop14/Training_assignment/assets/126051670/021bfc93-2a4d-47e9-9f98-7d5751febc5c)
+OUTPUT: 
+
+![Alt text](<Screenshot from 2024-02-28 14-29-05.png>)
+
+
+![Alt text](<Screenshot from 2024-02-28 14-29-17.png>)
+
+QUERY COST:
+
+![Alt text](<Screenshot from 2024-02-28 14-34-21.png>)
