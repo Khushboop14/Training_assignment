@@ -1,8 +1,9 @@
 8. Find all the orders whose two or more items are completed but the orders are still in the approved status.
 
 ```sql
+
 SELECT 
-    oh.order_id
+    oh.order_id, count(oitm.order_item_seq_id)
 FROM
     order_header AS oh
         JOIN
@@ -19,9 +20,8 @@ HAVING COUNT(os.order_id) >= 2;
 ```
 OUTPUT:
 
-![Alt text](<Screenshot from 2024-02-28 16-07-29.png>)
+![Alt text](<Screenshot from 2024-02-28 20-28-23.png>)
 
 QUERY COST:
 
-![Alt text](<Screenshot from 2024-02-28 16-08-21.png>)
-
+![Alt text](<Screenshot from 2024-02-28 20-28-34.png>)

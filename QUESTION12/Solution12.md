@@ -11,6 +11,25 @@
 
 ```sql
 
+SELECT 
+    oh.order_id,
+    rh.return_id,
+    ra.amount,
+    ra.return_adjustment_type_id,
+    ra.comments,
+    rh.entry_date,
+    rh.return_date,
+    oh.product_store_id
+FROM
+    return_header AS rh
+        JOIN
+    return_adjustment AS ra ON ra.return_id = rh.return_id
+        JOIN
+    order_header AS oh ON oh.order_id = ra.order_id
+WHERE
+    ra.RETURN_ADJUSTMENT_TYPE_ID = 'APPEASEMENT'
+        AND YEAR(rh.RETURN_DATE) = '2023'
+		AND MONTH(rh.RETURN_DATE) = '7' ;
 ```
 OUTPUT:
 
