@@ -4,15 +4,21 @@ QUERY 1:
 
 ```sql
 SELECT 
-    ri.order_id, ri.order_item_seq_id, ri.return_item_seq_id
+    ri.order_id
 FROM
     return_item AS ri
-        JOIN
-    order_item AS oitm ON ri.order_id = oitm.order_id
+WHERE
+    ri.status_id = 'RETURN_COMPLETED'
 GROUP BY order_id , order_item_seq_id
 HAVING COUNT(return_item_seq_id) > 1;
 
+
 ```
 
-![Screenshot from 2024-01-29 20-01-13](https://github.com/Khushboop14/Training_assignment/assets/126051670/9399a03e-4fe1-4358-be8e-4c8e4672ba52)
+OUTPUT:
 
+![Alt text](<Screenshot from 2024-02-28 18-05-56.png>)
+
+QUERY COST:
+
+![Alt text](<Screenshot from 2024-02-28 18-06-08.png>)
