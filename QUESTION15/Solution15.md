@@ -1,7 +1,5 @@
 15. Find all the orders that have more than one return.
 
-QUERY 1:
-
 ```sql
 SELECT 
     ri.order_id
