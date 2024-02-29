@@ -31,5 +31,5 @@ Output for Billing location:
 
 ![Alt text](<Screenshot from 2024-02-29 15-48-55.png>)
 
-Query Cost for shipping location:
+Query Cost for Billing location:
 ![Alt text](<Screenshot from 2024-02-29 15-49-03.png>)
