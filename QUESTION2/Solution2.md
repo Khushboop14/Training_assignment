@@ -21,4 +21,4 @@ WHERE
 ```
 OUTPUT:
 
-![Alt text](image.png)
+![Screenshot from 2024-03-01 09-30-31](https://github.com/Khushboop14/Training_assignment/assets/126051670/5f1c35a5-571c-4d27-ad25-1b258cd9b9f1)
