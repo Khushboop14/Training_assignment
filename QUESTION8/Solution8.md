@@ -18,5 +18,6 @@ OUTPUT:
 
 ```
 QUERY COST:
+
 ![Screenshot from 2024-02-27 10-51-00](https://github.com/Khushboop14/Training_assignment/assets/126051670/a412412b-4d2f-4871-b01a-c7ef98ceaa20)
 
