@@ -21,7 +21,9 @@ AND ocm.CONTACT_MECH_PURPOSE_TYPE_ID = 'BILLING_LOCATION';
 
 ```
 Output for Shipping location:
+
 ![Alt text](<Screenshot from 2024-02-29 15-48-13.png>)
+
 
 Query Cost for shipping location:
 
@@ -32,4 +34,5 @@ Output for Billing location:
 ![Alt text](<Screenshot from 2024-02-29 15-48-55.png>)
 
 Query Cost for Billing location:
+
 ![Alt text](<Screenshot from 2024-02-29 15-49-03.png>)
