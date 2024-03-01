@@ -1,5 +1,24 @@
 1. How many single-item orders were fulfilled from warehouses in the last month?
 ```sql
+<<<<<<< HEAD
+SELECT DISTINCT
+    oitm.order_id
+FROM
+    order_item AS oitm
+        JOIN
+    order_item_ship_group AS oisg ON oitm.order_id = oisg.order_id
+        JOIN
+    order_status AS ost ON ost.order_id = oitm.order_id
+        AND ost.order_item_seq_id = oitm.order_item_seq_id
+        JOIN
+    facility AS f ON f.facility_id = oisg.facility_id
+WHERE
+    f.facility_type_id = 'WAREHOUSE'
+        AND MONTH(ost.status_datetime) = MONTH(CURRENT_DATE()) - 1
+        AND ost.STATUS_ID = 'ITEM_COMPLETED'
+GROUP BY oitm.order_id
+HAVING COUNT(oitm.order_item_seq_id) = 1; 
+=======
 
 SELECT COUNT(*) FROM (
 SELECT 
@@ -25,8 +44,16 @@ GROUP BY oitm.order_id
 HAVING COUNT(oitm.order_item_seq_id) = 1
 ) AS count_of_orders;
 
+>>>>>>> ec32475225a91d34ff7a9a3af5928ef7cfef82bf
 ```
+<<<<<<< HEAD
+OUTPUT:
+=======
+>>>>>>> ec32475225a91d34ff7a9a3af5928ef7cfef82bf
 
+<<<<<<< HEAD
+![Alt text](<Screenshot from 2024-02-28 20-53-52.png>)
+=======
 Note: 
 
 order_item: order_id, order_item_seq_id
@@ -43,3 +70,4 @@ OUTPUT:
 QUERY COST:
 
 ![Alt text](<Screenshot from 2024-02-29 10-28-15.png>)
+>>>>>>> ec32475225a91d34ff7a9a3af5928ef7cfef82bf
